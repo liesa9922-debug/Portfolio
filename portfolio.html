@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <style>
+        /* ==========================================================
+           1. UNIVERSAL SELECTOR (*)
+           Resets default browser margins and paddings using absolute unit (px)
+           ========================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ==========================================================
+           2. ELEMENT SELECTORS
+           Uses Hex Color Model, RGB Color Model, and Absolute Units (px)
+           ========================================================== */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(244, 246, 249); /* RGB Color Model */
+            color: #212529;                       /* Hex Color Model */
+            padding: 20px;                         /* Absolute unit (px) */
+        }
+
+        header {
+            width: 100%;                           /* Width property */
+            height: 150px;                         /* Height property */
+            text-align: center;
+            padding-top: 25px;
+            /* Background image with color fallback */
+            background-color: #202428;
+            background-image: url('header-banner.jpg');
+            color: #ffffff;
+        }
+
+        main {
+            padding: 20px 0px;
+        }
+
+        section, article {
+            margin-bottom: 25px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;                           /* Height property */
+            background-color: #d1d5db;
+            margin: 15px 0px;
+        }
+
+        pre {
+            background-color: #eef1f5;
+            padding: 12px;
+            font-size: 13px;
+            border-left: 3px solid #2c3e50;
+            margin-top: 8px;
+        }
+
+        table {
+            width: 100%;                           /* Width property */
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-align: left;
+            color: #333333;
+        }
+
+        thead {
+            background-color: #dbe2ef;
+        }
+
+        aside {
+            /* Alpha Channel (RGBA) for soft tinted background */
+            background-color: rgba(0, 86, 179, 0.08); 
+            padding: 14px;
+            border-left: 4px solid #0056b3;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        /* ==========================================================
+           3. CLASS SELECTORS (.)
+           ========================================================== */
+        .container {
+            width: 850px;                          /* Absolute width unit */
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border: 1px solid #b6b2b2;
+        }
+
+        .highlight {
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        /* Visibility property demonstration */
+        .status-badge {
+            visibility: visible;                   /* Visibility property */
+            background-color: rgba(40, 167, 69, 0.15); /* RGBA Alpha channel */
+            color: #1e7e34;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .draft-note {
+            visibility: hidden;                    /* Hides element while holding space */
+            height: 0px;
+        }
+
+        /* ==========================================================
+           4. ID SELECTORS (#)
+           ========================================================== */
+        #about {
+            background-color: #fafbfc;
+            padding: 15px;
+            border: 1px solid #e1e4e8;
+        }
+
+        #academics {
+            margin-top: 20px;
+        }
+
+        #skills {
+            background-color: #fdfdfd;
+            padding: 15px;
+            border: 1px solid #e1e4e8;
+        }
+
+        #certificates {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+        }
+
+        /* ==========================================================
+           5. GROUP SELECTORS (,)
+           ========================================================== */
+        h1, h2, h3 {
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        table, th, td {
+            border: 1px solid #999999;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* ==========================================================
+           6. DESCENDANT SELECTORS (ancestor descendant)
+           ========================================================== */
+        header h1 {
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        header p {
+            color: #e5e7eb;
+            font-size: 14px;
+        }
+
+        #skills ul {
+            margin-left: 25px;
+            margin-top: 8px;
+        }
+
+        #skills ol {
+            margin-left: 20px;
+            margin-top: 4px;
+        }
+
+        #certificates ol {
+            margin-left: 25px;
+            margin-top: 8px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header with Background Image and Descendant Selectors -->
+        <header>
+            <h1><big>Ayushi Sharma</big></h1>
+            <p>Computer Science & Engineering Student | 2<sup>nd</sup> Year</p>
+            <p><small>Roll No: 202510101180004</small> <span class="status-badge">Active Student</span></p>
+        </header>
+
+        <hr>
+
+        <main>
+            <!-- About Section using ID Selector -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hello! I am a passionate student learning <span class="highlight">Full Stack Web Development</span> and Cybersecurity.</p>
+                <p>My Favorite Quote:</p>
+                <pre>"Code is like humor.
+When you have to explain it,
+it's bad."</pre>
+            </section>
+
+            <!-- Academic Qualifications Table using Group Selectors & Width Property -->
+            <section id="academics">
+                <h2>Academic Qualifications</h2>
+                <table>
+                    <caption>Academic Performance & Verification Links</caption>
+                    <thead>
+                        <tr>
+                            <th>Level / Degree</th>
+                            <th>Board / University</th>
+                            <th>Passing Year</th>
+                            <th>Score</th>
+                            <th>Marksheet Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Class 10<sup>th</sup></td>
+                            <td>ICSE</td>
+                            <td>2023</td>
+                            <td>81.0%</td>
+                            <td><a href="10thMarksheet.jpeg" target="_blank">View Marksheet</a></td>
+                        </tr>
+                        <tr>
+                            <td>Class 12<sup>th</sup></td>
+                            <td>ICSE</td>
+                            <td>2025</td>
+                            <td>86.0%</td>
+                            <td><a href="12thMarksheet.pdf" target="_blank">View Marksheet</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Skills Section using Descendant List Selectors -->
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Web Technologies
+                        <ol>
+                            <li>HTML5 (Semantic Layouts)</li>
+                            <li>CSS (Selectors, Colors, Units, Layout Basics)</li>
+                            <li>Cybersecurity (Basics)</li>
+                        </ol>
+                    </li>
+                    <li>Programming
+                        <ul>
+                            <li>C Language</li>
+                            <li>Python (Basics)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Certificates Article using ID and Descendant Selectors -->
+            <article id="certificates">
+                <h2>Certificates & Achievements</h2>
+                <ol>
+                    <li><a href="certificate1.pdf" target="_blank">AYUSHI SHARMA Certificate</a></li>
+                    <li><a href="certificate2.jpeg" target="_blank">Hack The Gram Certificate</a></li>
+                    <li><a href="certificate3.jpeg" target="_blank">L&T Scientific Calculator Certificate</a></li>
+                </ol>
+            </article>
+
+            <!-- Aside with RGBA Alpha Channel Styling -->
+            <aside>
+                <h3>Student Notice</h3>
+                <p><small>Marksheet and certificate links reference local directory files. Keep assets saved in the training folder.</small></p>
+            </aside>
+
+            <!-- Hidden element demonstrating visibility property -->
+            <p class="draft-note">Instructor verification pending.</p>
+        </main>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <p><small>&copy; 2026 Ayushi Sharma. Built for Web Tech training</small></p>
+            <p>Contact: <a href="mailto:liesa9922@gmail.com">liesa9922@gmail.com</a></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
